@@ -21,7 +21,7 @@ dict_quiz = {
 # Сounter initiation
 counter_answer_right = [0, 0]
 
-for question in dict_quiz.keys():
+for question in dict_quiz:
     answer = input(question)
     if answer.lower() == dict_quiz.get(question).lower():
         print('Great!')
