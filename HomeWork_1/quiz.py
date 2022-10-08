@@ -27,7 +27,7 @@ for question in dict_quiz:
         print('Great!')
         counter_answer_right[0] += 1
         counter_answer_right[1] += 1
-    elif not answer.lower() :
+    elif not answer.lower():
         print('You missed the question :С')
     else:
         print('Incorrect')
