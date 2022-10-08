@@ -5,7 +5,7 @@
 
 num_1 = float(input('Enter the first number '))
 num_2 = float(input('Enter the second number '))
-action = str(input('Enter a sign "+" or "-" '))
+action = input('Enter a sign "+" or "-" ')
 
 if action == '+':
     print('The sum of the numbers is {}'.format(num_1 + num_2))
