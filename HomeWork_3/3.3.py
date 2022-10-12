@@ -3,6 +3,7 @@
 И возвращает оба
 """
 
+
 def max_min(*numbers):
     max_number = max(numbers)
     min_number = min(numbers)
@@ -18,7 +19,7 @@ print(max_min(1, 3, 5, 6, 7, 8))
 """
 
 
-def case_func(user_string: str, case:bool=True):
+def case_func(user_string: str, case: bool = True):
     if case:
         return user_string.upper()
     else:
