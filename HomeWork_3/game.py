@@ -49,10 +49,7 @@ def is_game_finished(field):
     :return: True if the game is finished, False otherwise.
     """
     result_fild = list(range(1, 16)) + list(EMPTY_MARK)
-    if field == result_fild:
-        return True
-    else:
-        return False
+    return field == result_fild
 
 
 def perform_move(field, key):
@@ -66,11 +63,11 @@ def perform_move(field, key):
     for pole in field:
         if pole == EMPTY_MARK:
             index = field.index(pole)
-            if index not in NOT_CAN_MOVE[key]:
+            if index in NOT_CAN_MOVE[key]:
+                raise IndexError("The move can't be done")
+            else:
                 field[index], field[index + MOVES[key]] = field[index + MOVES[key]], field[index]
                 break
-            else:
-                raise IndexError("The move can't be done")
     return field
 
 
