@@ -60,15 +60,12 @@ def perform_move(field, key):
     :return: new field state (after the move).
     :raises: IndexError if the move can't be done.
     """
-    for pole in field:
-        if pole == EMPTY_MARK:
-            index = field.index(pole)
-            if index in NOT_CAN_MOVE[key]:
-                raise IndexError("The move can't be done")
-            else:
-                field[index], field[index + MOVES[key]] = field[index + MOVES[key]], field[index]
-                break
-    return field
+    index = field.index(EMPTY_MARK)
+    if index in NOT_CAN_MOVE[key]:
+        raise IndexError("The move can't be done")
+    else:
+        field[index], field[index + MOVES[key]] = field[index + MOVES[key]], field[index]
+        return field
 
 
 def handle_user_input():
