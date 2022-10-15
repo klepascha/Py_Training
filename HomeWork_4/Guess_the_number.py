@@ -25,7 +25,6 @@ def is_game_finish(user_number, correct_number):
 
 def main():
     guess_number = random.randint(1, 100)
-    print(guess_number)
     while True:
         user_num = user_input()
         if is_game_finish(user_num, guess_number):
