@@ -29,8 +29,7 @@ def is_char(char, word, correct_list, current_lives):
 
 def main():
     lives = 5
-    word_index = random.randint(0, len(WORDS) - 1)
-    game_word = WORDS[word_index]
+    game_word = random.choice(WORDS)
     game_field = ['*'] * len(game_word)
     print('My word is', *game_field, '\nyou have {} lives'.format(lives))
     while True:
